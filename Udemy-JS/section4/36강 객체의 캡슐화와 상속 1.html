@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 캡슐화와 상속</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 캡슐화는 객체를 외부에서 마구잡이로 접근하지 못하게 객체를 캡슐처럼 감싸서
+    // 특정 방법으로만 접근 가능하게 제한하는 개념 --> 보안성과 독립성을 향상
+
+    // 상속 --> 객체들 사이에서 상속이 일어나는데
+    // 객체1 --> 객체2
+
+    function Product(n, p, mb){
+        let name = n;
+        let price = p;
+        let madeBy = mb;
+        // 생성자 함수를 통한 객체의 초기화
+
+        this.getName = function(){
+            return name;
+        }
+
+        this.getPrice = function(){
+            return price;
+        }
+
+        this.getMadeBy = function(){
+            return madeBy;
+        }
+
+        this.setName = function(n){
+            name = n;
+        }
+
+        this.setPrice = function(p){
+            price = p;
+        }
+
+        this.setMadeBy = function(mb){
+            madeBy = mb;
+        }
+    }
+    // Product 생성자 함수를 통해 만들어지는 객체들의 캡슐화
+
+    var s10 = new Product('갤럭시s10', 1000000, '삼성');
+    console.log(s10);
+    console.log(s10.name);
+    console.log(s10.getName());
+    console.log(s10.getPrice());
+
+    Product.prototype.getExplane = function(){
+        return `상품 이름은 ${this.getName()}이고 가격은 ${this.getPrice()}원이고 제조사는 ${this.getMadeBy()}입니다.`;
+    }
+    console.log(s10.getExplane());
+
+    function Iphone(n, p, mb, v){
+        this.p = Product;
+        this.p(n, p, mb);
+
+        let version = v;
+
+        this.getVersion = function(){
+            return version;
+        }
+
+        this.setVersion = function(v){
+            version = v;
+        }
+    }
+
+    Iphone.prototype = Product.prototype;
+
+    var iphone = new Iphone('아이폰12', 1000000, '애플', '프로');
+    console.log(`아이폰의 이름은? ${iphone.getName()}`);
+    console.log(iphone.getExplane());
+
+    console.log('Iphone을 통해서 생성됐나요?' + (iphone instanceof Iphone));
+    console.log('Product를 통해서 생성됐나요?' + (iphone instanceof Product));
+</script>
+</html>

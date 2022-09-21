@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Iphone(n, p, mb, v){
+        this.p = Product;
+        this.p(n, p, mb);
+
+        let version = v;
+
+        this.getVersion = function(){
+            return version;
+        }
+
+        this.setVersion = function(v){
+            version = v;
+        }
+    }
+
+    Iphone.prototype = Product.prototype;
+
+    var iphone = new Iphone('아이폰12', 1000000, '애플', '프로');
+    console.log(`아이폰의 이름은? ${iphone.getName()}`);
+</script>
+</html>

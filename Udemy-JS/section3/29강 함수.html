@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function test1 () {
+        console.log('함수 실행');
+    }
+    // function 함수명(){소스코드 작성}
+    // 함수 안에 작성된 코드는 기존과 다르게 실행시 자동으로 작동되지 않음
+
+    test1();
+
+    // (fuction(){코드})();
+    // 페이지가 로딩되고 난 후 바로 작동이 됩니다.
+
+    (function(){
+        console.log('호출하지 않아도 자동으로 실행')
+    })();
+
+    // 전달인자와 매개변수
+    function test2 (input) {
+        console.log(input);
+    }
+    test2('매개변수가 들어갑니다.');
+
+    // return 돌려준다, 반환시켜준다는 의미
+
+    function sum (num1, num2){
+        var sumNum = num1 + num2;
+        return sumNum;
+    }
+    // 함수에서의 returun은 해당 함수를 호출 했을때
+    // 결과값으로 return 다음에 적어준 내용을 전달해줌
+    // return은 필수값이 아니며, return이 없을 경우 반환해주는 값이 없습니다. (undefined가 결과값)
+    // return만 적어줄경우에는 해당 위치에서 반환하는 값이 없이 현재 실행되고 있는 함수가 종료.
+
+    sum(1,2);
+    console.log(sum(1,2));
+</script>
+</html>

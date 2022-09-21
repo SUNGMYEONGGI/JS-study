@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 객체지향 프로그래밍
+    // 현실세계에 있는 물체의 개념을 데이터화 시키는것
+
+    function person(name){
+        this.name = name;
+        // this.name --> person이라는 생성자 함수를 통해 성성되는 객체인의 name
+        // name --> 매개변수로 들어온 name
+        this.hello = function(){
+            console.log('안녕! 난 ' + this.name + '이야');
+        }
+    }
+
+    var student1 = new person('홍길동');
+    var student2 = new person('김철수');
+
+    console.log(student1.name);
+    student1.hello();
+
+    console.log(student2.name);
+    student2.hello();
+
+    // 같은 생성자 함수를 통해서 만들어 졌지만, 두 객체는 서로 다른 객체이다.
+
+    function Product(name, price, madeBy, weight){
+        this.name = name;
+        this.price = price;
+        this.madeBy = madeBy;
+        this.weight = weight;
+
+        this.hello = function(){
+            console.log(`이 작품의 이름은 ${this.name}이고, 가격은 ${this.price}원 이며 ${this.madeBy}에서 만들어졌습니다.`);
+        }
+    }
+    var s10 = new Product('갤럭시s10', 1000000, '삼성', '100g');
+    s10.hello();
+
+</script>
+</html>
