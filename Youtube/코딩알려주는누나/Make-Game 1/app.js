@@ -26,9 +26,8 @@ function Bullet(){
         this.x= spaceshipX + 20;
         this.y= spaceshipY;
 
-        bulletList.push(this)
+        bulletList.push(this);
     };
-
     this.update = function(){
         this.y -= 7;
     };
@@ -50,14 +49,14 @@ function generateRandomValue(min, max){
     return randomnum
 }
 
-let alienList = []
+let alienList = [];
 
 function alien(){
     this.x=0;
     this.y=0;
     this.init=function(){
-        this.x= generateRandomValue(0, canvas.width - 55);
         this.y= 0;
+        this.x= generateRandomValue(0, canvas.width - 55);
         alienList.push(this)
     };
     this.update = function(){
@@ -131,8 +130,8 @@ function update(){
 
     for(let i=0; i<bulletList.length; i++){
         if (bulletList[i].alive){
-            bulletList[i].update();
-            bulletList[i].checkhit();
+            bulletList[i].update()
+            bulletList[i].checkhit()
         }
     }
 
@@ -167,7 +166,7 @@ function main(){
         render(); // 그려주고
         requestAnimationFrame(main);
     } else {
-        ctx.drawImage(gameoverImage, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(gameoverImage, 10, 100, 380, 380);
     }
 }
 
