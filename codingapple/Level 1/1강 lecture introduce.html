@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS 초보예요</h1>
+
+    <script>
+        document.getElementById("hello").innerHTML = '안녕';
+        // document.getElementById --> html문서에서 Id요소를 가져와라
+        // innerHTML --> 안녕으로 바꿔라
+        document.getElementById("hello").style.fontSize = '16px';
+
+        document.getElementById("hello").style.color = 'red';
+        document.getElementById("hi").innerHTML = 'JS 고수에요';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AlertBox UI.css">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="alert-box" id="alert">
+        <p id="alert-window">알림창임</p>
+        <button onclick="오픈('none');">닫기</button>
+    </div>
+    <button onclick="아이디비번('아이디입력해')">버튼1</button>
+    <button onclick="아이디비번('비번입력해')">버튼2</button>
+
+    <script>
+        
+        function 아이디비번(아이디비번파라미터){
+            document.getElementById('alert-window').innerHTML = 아이디비번파라미터;
+            document.getElementById('alert').style.display = 'block';    
+        }
+    </script>
+
+</body>
+</html>

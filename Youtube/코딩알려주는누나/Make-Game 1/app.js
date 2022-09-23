@@ -141,7 +141,6 @@ function update(){
 }
 
 
-
 function render(){
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
     ctx.drawImage(spaceshipImage, spaceshipX, spaceshipY);

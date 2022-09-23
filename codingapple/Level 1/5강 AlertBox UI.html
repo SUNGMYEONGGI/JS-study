@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AlertBox UI.css">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="alert-box" id="alert">
+        <p id="alert-window">알림창임</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="아이디()">버튼1</button>
+    <button onclick="비번()">버튼2</button>
+
+    <script>
+
+        // 문서에 id 'close'를 클릭하면 이벤트가 발생합니다. 
+        document.getElementById('close').addEventListener('click', function(){ // 파라미터자리에 들어가는 함수 --> 콜백함수
+            document.getElementById('alert').style.display = 'none';
+        });
+        // 마우스이벤트: click, dbclick, mouseover, mouseout, mousemove, mouseup, mousedown
+        // 키보드이벤트: keydown, keyup, keypress
+        // UI 이벤트: load, unload, resize, scroll 
+        // event를 감지하고 싶으면 addEventListener('event명') 사용하면 됨
+
+
+        function 알림창열기(알림창열기파라미터){
+            document.getElementById('alert').style.display = 알림창열기파라미터;
+        }
+
+        function 아이디(){
+            document.getElementById('alert-window').innerHTML = '아이디입력'; 
+            // class로 찾기 가능 --> getElementsByClassName()
+            // getElementsByClassName()[??] -> ??번째 class를 찾음
+            document.getElementById('alert').style.display = 'block';    
+        }
+
+        function 비번(){
+            document.getElementById('alert-window').innerHTML = '비번입력';
+            document.getElementById('alert').style.display = 'block';    
+        }
+    </script>
+
+</body>
+</html>

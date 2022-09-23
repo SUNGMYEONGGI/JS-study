@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="AlertBox UI.css">
+    <title>Document</title>
+</head> 
+<body>
+    <div class="alert-box" id="alert">
+        알림창임
+        <button onclick="오픈('none');">닫기</button>
+    </div>
+    <button onclick="오픈('block');">버튼</button>
+
+    <script>
+        function 오픈(오픈파라미터){
+            document.getElementById('alert').style.display = 오픈파라미터;
+        }
+
+        function 플러스(플러스파라미터){
+            2 + 플러스파라미터
+        }
+        플러스(1);
+        플러스(2);
+        플러스(3);
+        
+    </script>
+
+</body>
+</html>
