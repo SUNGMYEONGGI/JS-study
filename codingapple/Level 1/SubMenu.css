@@ -1,6 +1,36 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 .list-group {
     display : none
   }
-  .show {
-    display : block
+.show {
+  display : block
+}
+.black-bg{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 30%;
+    z-index: 5;
+    padding: 30px;
+    display: none;
   }
+  .white-bg{
+    background: white;
+    position: fixed;
+    font-size: 10px;
+    top: 20%;
+    left: 20%;
+    display: block;
+  }
+.show-modal{
+  display: block;
+}
+.remove-modal{
+  display: none;
+}

@@ -9,6 +9,12 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   </head>
   <body>
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <button class="btn btn-danger" id="close">닫기</button>
+      </div>
+    </div>
 
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
@@ -27,12 +33,15 @@
       <li class="list-group-item">And a fifth one</li>
     </ul> 
 
-    <button>로그인</button>
+    <button id="login">로그인</button>
 
     <script>
-      document.querySelector('.navbar-toggler').addEventListener('click', function(){
-        document.querySelectorAll('.list-group')[0].classList.toggle('show');
-      });
+      $('#login').on('click',function(){ //로그인 버튼을 클릭하면
+        $('.black-bg').addClass('show-modal'); // class black-bg라는 곳에 show-modal이라는 class를 추가해라
+      })
+      $('#close').on('click',function(){ // close라는 id를 가진 곳을 클릭하면
+        $('.black-bg').addClass('remove-modal'); // class black-bg라는 곳에 remove-modal이라는 class를 추가해라
+      })
     </script>
 
   </body>
