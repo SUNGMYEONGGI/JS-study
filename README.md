@@ -6,8 +6,8 @@
 </br>
 
 - # Nomad-Coder
-  -  [바닐라 JS로 크롬 앱 만들기](https://t1.daumcdn.net/cfile/tistory/998391345E311B0804)
-  -  
+  -  [바닐라 JS로 크롬 앱 만들기](https://nomadcoders.co/javascript-for-beginners)
+  -  [바닐라 JS로 그림 앱 만들기](https://nomadcoders.co/javascript-for-beginners-2)
 
 </br>
 
