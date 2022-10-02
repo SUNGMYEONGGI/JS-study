@@ -5,32 +5,42 @@ html, body{
 }
 .list-group {
     display : none
-  }
+}
 .show {
   display : block
 }
 .black-bg{
-    background: rgba(0,0,0,0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30%;
-    height: 30%;
-    z-index: 5;
-    padding: 30px;
-    display: none;
-  }
-  .white-bg{
-    background: white;
-    position: fixed;
-    font-size: 10px;
-    top: 20%;
-    left: 20%;
-    display: block;
-  }
-.show-modal{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  z-index: 5;
+  padding: 30px;
+  visibility: hidden; /* 숨김 */
+  opacity: 0; /* 투명도 */
+  transition: all 1s;
+}
+.white-bg{
+  background: white;
+  position: fixed;
+  font-size: 10px;
+  top: 20%;
+  left: 20%;
   display: block;
 }
+.show-modal{
+  visibility: visible; /* 보임 */
+  opacity: 1; /* 투명도 */
+}
 .remove-modal{
-  display: none;
+  visibility: hidden; /* 숨김 */
+  opacity: 0; /* 투명도 */
+}
+.main-bg{
+  padding : 100px 20px;
+  background : lightgrey;
+}
+.dark{
+  background: black;
+  color: white;
 }

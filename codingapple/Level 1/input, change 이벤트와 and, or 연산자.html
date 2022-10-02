@@ -9,10 +9,20 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   </head>
   <body>
+
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+
+        <form action="9강 testfile.html">
+            <div class="my-3">
+              <input type="text" class="form-control" id="email">
+             </div>
+               <input type="password" class="form-control" id="password">
+             </div>
+             <button type="submit" class="btn btn-primary">전송</button>
+             <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form>
       </div>
     </div>
 
@@ -33,21 +43,25 @@
       <li class="list-group-item">And a fifth one</li>
     </ul> 
 
-    <button id="login">로그인</button>
+    <div class="main-bg">
+        <b4>Shirt on Sale</b4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+
 
     <script>
-      $('#login').on('click',function(){ //로그인 버튼을 클릭하면
-        $('.black-bg').addClass('show-modal'); // class black-bg라는 곳에 show-modal이라는 class를 추가해라
-      })
-      $('#close').on('click',function(){ // close라는 id를 가진 곳을 클릭하면
-        $('.black-bg').addClass('remove-modal'); // class black-bg라는 곳에 remove-modal이라는 class를 추가해라
-      })
+        // change 이벤트는 <input>에 입력한 값이 바뀌고 포커스를 잃을 때 발생
+        document.getElementById('email').addEventListener('change', function(){
+            console.log('안녕')
+        })
+
+
+        // && --> and 연산자
+        // || --> or 연산자
+        // == --> 느슨한 비교
+        // === --> 엄격한 비교 
     </script>
 
   </body>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </html>
-
-// 7강에서는 jquery문법과 CSS에 Class를 만든 후 addClass함수를 활용하여 필요 시에 Class를 추가 해주는 것이 핵심 
-// $('.클래스명').addClass('추가할 클래스명') -> 원하는 클래스명에 추가할 클래스명을 addClass 함수를 활용하여 추가 하겠다.
-// .on()은 자바스크립트 함수로 .addEventListener()이다.
