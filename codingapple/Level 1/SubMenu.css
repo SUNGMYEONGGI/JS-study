@@ -22,8 +22,8 @@ html, body{
 }
 .white-bg{
   background: white;
-  position: fixed;
   font-size: 10px;
+  border-radius: 20px;
   top: 20%;
   left: 20%;
   display: block;
