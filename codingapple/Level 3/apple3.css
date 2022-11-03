@@ -1,0 +1,66 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.list-group {
+    display : none
+}
+.show {
+  display : block
+}
+.black-bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0,0,0,0.5);
+  z-index: 5;
+  padding: 30px;
+  visibility: hidden; /* 숨김 */
+  opacity: 0; /* 투명도 */
+  transition: all 1s;
+}
+.white-bg{
+  background: white;
+  position: fixed;
+  font-size: 10px;
+  top: 20%;
+  left: 20%;
+  display: block;
+}
+.show-modal{
+  visibility: visible; /* 보임 */
+  opacity: 1; /* 투명도 */
+}
+.remove-modal{
+  visibility: hidden; /* 숨김 */
+  opacity: 0; /* 투명도 */
+}
+.main-bg{
+  padding : 100px 20px;
+  background : lightgrey;
+}
+.dark{
+  background: black;
+  color: white;
+}
+.slide-container{
+  width: 300vw;
+  transition: all 1s;
+}
+.slide-box{
+  width: 100vw;
+  float: left;
+}
+.slide-box img{
+  width: 100%;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+.navbar-brand{
+  font-size: 30px;
+  transition: all 2s;
+}
