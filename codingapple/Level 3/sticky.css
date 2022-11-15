@@ -1,0 +1,15 @@
+.grey{
+    background: lightgray;
+    height: 2000px;
+    margin-top: 500px;
+}
+.image{
+    float: right;
+    width: 400px;
+    position: sticky;
+    top: 100px; /* 조건부로 fixed*/
+}
+.text{
+    float: left;
+    width: 300px;
+}

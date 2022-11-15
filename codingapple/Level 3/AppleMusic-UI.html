@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="music.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-background">
+        <div class="card-box">
+            <img src="card1.png">
+        </div>
+        <div class="card-box">
+            <img src="card2.png">
+        </div>
+
+        <div class="card-box">
+            <img src="card3.png">
+        </div>
+    </div>
+
+    <script>
+        $(window).scroll(function(){
+            var 높이 = $(window).scrollTop();
+            console.log(높이);
+            
+            var y =  -1/500 * 높이 + 115/50;
+            $('.card-box').eq(0).css('opacity', y);
+            
+            var z = (-1/5000) * 높이 + 565/500;
+            $('.card-box').eq(0).css('transform', `scale( ${z} )`);
+        });
+        
+    </script>
+</body>
+</html>
